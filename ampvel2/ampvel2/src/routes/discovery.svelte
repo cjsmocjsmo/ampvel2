@@ -53,18 +53,18 @@
     }
 
      let handlePlayShow = (media) => {
-        if (LP) {
-            console.log(media)
+        // if (LP) {
+        //     console.log(media)
 
-            let foo = media.split("TVShows", 2)
-            let newpath = `http://192.168.0.42:8063` + "/" + media
-            console.log(newpath)
-            TVlocalplayURL.set(newpath)
-            visibleDis = false
-        } else {
+        //     let foo = media.split("TVShows", 2)
+        //     let newpath = `http://192.168.0.42:8063` + "/" + media
+        //     console.log(newpath)
+        //     TVlocalplayURL.set(newpath)
+        //     visibleDis = false
+        // } else {
             let promise = getPlayMedia(media).catch(err => console.log(err));
             visibleDis = false
-        }
+        // }
         
     }
 </script>
