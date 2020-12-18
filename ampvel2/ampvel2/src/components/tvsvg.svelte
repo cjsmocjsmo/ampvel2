@@ -23,7 +23,7 @@
 
 	<a href="spacetime"><text x="0" y="82" font-size="1em" fill="grey">SpaceTime</text></a>
 	<a href="seancarrol"><text x="100" y="82" font-size="1em" fill="grey">Sean Carroll</text></a>
-	<!-- <a href="starwars"><text x="230" y="82" font-size="1em" fill="grey">Star Wars</text></a> -->
+	<a href="enterprise"><text x="223" y="82" font-size="1em" fill="grey">Enterprise</text></a>
 
 	Sorry, your browser does not support inline SVG.  
 </svg>
