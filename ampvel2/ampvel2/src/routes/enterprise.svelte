@@ -93,8 +93,8 @@
     {#if showlistcount > 0}
         {#each showlist as sshow }
             <li>
-                <a href="tvshows" on:click={handlePlayShowEnterprise(sshow.tvfspath)}>{sshow.title}</a>
                 <span>{sshow.episode}</span>
+                <a href="tvshows" on:click={handlePlayShowEnterprise(sshow.tvfspath)}>{sshow.title}</a>
             </li>
         {/each}
     {/if}
@@ -103,7 +103,7 @@
 
 <style>
     span {
-        margin-left: 20px;
+        margin-right: 20px;
         color: white;
     }
     ul {

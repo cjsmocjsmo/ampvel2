@@ -70,15 +70,15 @@
     {#if ORVshowlistcount > 0}
         {#each ORVshowlist as sshow }
             <li>
-                <a href="tvshows" on:click={handlePlayShowOr(sshow.tvfspath)}>{sshow.title}</a>
                 <span>{sshow.episode}</span>
+                <a href="tvshows" on:click={handlePlayShowOr(sshow.tvfspath)}>{sshow.title}</a>
             </li>
         {/each}
     {/if}
 </ul>
 <style>
     span {
-        margin-left: 20px;
+        margin-right: 20px;
         color: white;
     }
     ul {
@@ -98,16 +98,5 @@
     h1 {
         color: white;
     }
-    /* button {
-        width:47%;
-        padding:7px;
-        margin:2px;
-        background-color: rgb(192, 62, 153);
-        font-size: 16px;
-        font-weight: bold;
-    }
-    .boo {
-        width:31%;
-        margin:2px;
-    } */
+
 </style>

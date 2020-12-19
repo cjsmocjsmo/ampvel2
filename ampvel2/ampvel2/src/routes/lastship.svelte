@@ -85,8 +85,8 @@
     {#if LSshowlistcount > 0}
         {#each LSshowlist as sshow }
             <li>
-                <a href="tvshows" on:click={handlePlayLS(sshow.tvfspath)}>{sshow.title}</a>
                 <span>{sshow.episode}</span>
+                <a href="tvshows" on:click={handlePlayLS(sshow.tvfspath)}>{sshow.title}</a>
             </li>
         {/each}
     {/if}
@@ -95,7 +95,7 @@
 
 <style>
     span {
-        margin-left: 20px;
+        margin-right: 20px;
         color: white;
     }
 
@@ -117,19 +117,4 @@
     h1 {
         color: white;
     }
-    /* button {
-        width:49%;
-        padding:7px;
-        margin:.5px;
-        background-color: rgb(192, 62, 153);
-        font-size: 16px;
-        font-weight: bold;
-    } */
-    /* .boo {
-        width:32%;
-        margin:.5px;
-    }
-    .bar {
-        width:98.5%;
-    } */
 </style>

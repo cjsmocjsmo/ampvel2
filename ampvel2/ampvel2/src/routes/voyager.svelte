@@ -101,8 +101,8 @@
     {#if VOYshowlistcount > 0}
         {#each VOYshowlist as sshow }
             <li>
-                <a href="tvshows" on:click={handlePlayVOY(sshow.tvfspath)}>{sshow.title}</a>
                 <span>{sshow.episode}</span>
+                <a href="tvshows" on:click={handlePlayVOY(sshow.tvfspath)}>{sshow.title}</a>
             </li>
         {/each}
     {/if}
@@ -110,7 +110,7 @@
 
 <style>
     span {
-        margin-left: 20px;
+        margin-right: 20px;
         color: white;
     }
     ul {
