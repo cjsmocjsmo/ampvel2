@@ -66,6 +66,9 @@
         // }
     }
 </script>
+<svelte:head>
+	<title>Mandalorian</title>
+</svelte:head>
 
 <h1>Mandalorian</h1>
 <Controls />

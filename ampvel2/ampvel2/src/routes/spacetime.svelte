@@ -37,6 +37,9 @@
         let promise = getPlayMedia(media).catch(err => console.log(err));
     }
 </script>
+<svelte:head>
+	<title>SpaceTime</title>
+</svelte:head>
 
 <h1>PBS SpaceTime</h1>
 <Controls />

@@ -56,6 +56,9 @@ let handlegetMovClick = (x) => {
 
 
 </script>
+<svelte:head>
+	<title>Action</title>
+</svelte:head>
 
 
 <!-- <nav> -->

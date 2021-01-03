@@ -49,6 +49,10 @@ let handlegetMovClick = (x) => {
 	// }
 }
 </script>
+<svelte:head>
+	<title>Men In Black</title>
+</svelte:head>
+
 <nav>
 	<button class="b1"><a href=".">Back</a></button>
 	<h1>Men In Black</h1>

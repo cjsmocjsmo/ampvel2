@@ -68,6 +68,9 @@
         
     }
 </script>
+<svelte:head>
+	<title>Discovery</title>
+</svelte:head>
 
 <h1>Discovery</h1>
 <Controls />

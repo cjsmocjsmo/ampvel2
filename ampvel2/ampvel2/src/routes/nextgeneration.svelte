@@ -74,6 +74,9 @@
         // }
     }
 </script>
+<svelte:head>
+	<title>Next Generation</title>
+</svelte:head>
 
 <h1>The Next Generation</h1>
 <Controls />

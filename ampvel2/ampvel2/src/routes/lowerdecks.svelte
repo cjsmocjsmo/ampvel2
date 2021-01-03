@@ -63,6 +63,10 @@
         
     }
 </script>
+<svelte:head>
+	<title>Lower Decks</title>
+</svelte:head>
+
 
 <h1>Lower Decks</h1>
 <Controls />

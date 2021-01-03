@@ -63,6 +63,9 @@
     }
 
 </script>
+<svelte:head>
+	<title>The Last Ship</title>
+</svelte:head>
 
 <h1>The Last Ship</h1>
 <Controls />

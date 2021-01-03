@@ -59,6 +59,9 @@
         // }
     }
 </script>
+<svelte:head>
+	<title>Lost In Space</title>
+</svelte:head>
 
 <h1>Lost In Space</h1>
 <Controls />

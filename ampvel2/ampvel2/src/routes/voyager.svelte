@@ -73,6 +73,9 @@
         // }
     }
 </script>
+<svelte:head>
+	<title>Voyager</title>
+</svelte:head>
 
 <h1>Voyager</h1>
 <Controls />

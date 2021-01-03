@@ -61,6 +61,9 @@
         
     }
 </script>
+<svelte:head>
+	<title>Altered Carbon</title>
+</svelte:head>
 
 <h1>Altered Carbon</h1>
 <Controls />

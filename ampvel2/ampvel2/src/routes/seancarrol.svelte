@@ -63,6 +63,9 @@
         
     }
 </script>
+<svelte:head>
+	<title>Sean Carrol</title>
+</svelte:head>
 
 <h1>Sean Carroll Phd</h1>
 <Controls />

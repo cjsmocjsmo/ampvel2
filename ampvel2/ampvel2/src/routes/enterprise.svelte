@@ -59,6 +59,9 @@
         // }
     }
 </script>
+<svelte:head>
+	<title>Star Trek</title>
+</svelte:head>
 
 <h1>Star Trek</h1>
 <Controls />

@@ -63,6 +63,9 @@
         
     }
 </script>
+<svelte:head>
+	<title>Picard</title>
+</svelte:head>
 
 <h1>Picard</h1>
 <Controls />

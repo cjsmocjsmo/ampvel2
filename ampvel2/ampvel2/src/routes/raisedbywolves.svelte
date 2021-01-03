@@ -63,6 +63,9 @@
         
     }
 </script>
+<svelte:head>
+	<title>Raised By Wolves</title>
+</svelte:head>
 
 <h1>Raised By Wolves</h1>
 <Controls />

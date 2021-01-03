@@ -54,6 +54,9 @@
         // }
     }
 </script>
+<svelte:head>
+	<title>The Orville</title>
+</svelte:head>
 
 <h1>The Orville</h1>
 <Controls />
