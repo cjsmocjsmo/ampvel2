@@ -55,7 +55,7 @@
     }
 </script>
 <svelte:head>
-	<title>The Orville</title>
+	<title>For All ManKind</title>
 </svelte:head>
 
 <h1>For All Mankind</h1>

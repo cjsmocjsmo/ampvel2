@@ -55,16 +55,16 @@
     }
 </script>
 <svelte:head>
-	<title>The Orville</title>
+	<title>Alien Worlds</title>
 </svelte:head>
 
-<h1>For All Mankind</h1>
+<h1>Alien Worlds</h1>
 <Controls />
 <svg viewBox="0 0 273 34">
-    <rect on:click={handleAlienWorlds1} x="0" y="0" width="32%" height="30" style="fill:rgb(0,0,255);stroke-width:1;stroke:rgb(0,0,0)" />
-    <rect on:click={handleFAMK2} x="97" y="0" width="32%" height="30" style="fill:red;stroke-width:1;stroke:rgb(0,0,0)" /> -->
-    <rect on:click={handleFAMK3} x="195" y="0" width="32%" height="30" style="fill:green;stroke-width:1;stroke:rgb(0,0,0)" />
-    <text on:click={handleAlienWorlds1} x="23" y="18" font-size=".7em" fill="white">Season 1</text>
+    <rect on:click={handleAlienWorlds1} x="0" y="0" width="100%" height="30" style="fill:rgb(0,0,255);stroke-width:1;stroke:rgb(0,0,0)" />
+    <!-- <rect on:click={handleAlienWorlds1} x="97" y="0" width="32%" height="30" style="fill:red;stroke-width:1;stroke:rgb(0,0,0)" /> -->
+    <!-- <rect on:click={handleFAMK3} x="195" y="0" width="32%" height="30" style="fill:green;stroke-width:1;stroke:rgb(0,0,0)" /> -->
+    <text on:click={handleAlienWorlds1} x="123" y="18" font-size=".7em" fill="white">Season 1</text>
     <!-- <text on:click={handleFAMK2} x="120" y="18" font-size=".7em" fill="white">Season 2</text> -->
     <!-- <text on:click={handleFAMK3} x="210" y="18" font-size=".7em" fill="white">Season 3</text> -->
 </svg> 

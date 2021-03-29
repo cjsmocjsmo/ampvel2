@@ -2,7 +2,7 @@
   "bundler": "rollup",
   "shimport": "2.0.4",
   "assets": {
-    "main": "client.a914ecfe.js"
+    "main": "client.6dc2847d.js"
   },
   "css": {
     "main": [
@@ -11,270 +11,270 @@
   },
   "dependencies": {
     "index.svelte": [
-      "index.6d73d0ee.js",
-      "Controls.0752ead6.js",
+      "index.87dc043b.js",
+      "Controls.4b712e02.js",
       "inject_styles.5607aec6.js"
     ],
     "nextgeneration.svelte": [
-      "nextgeneration.829564ba.js",
-      "Controls.0752ead6.js",
+      "nextgeneration.40a90f20.js",
+      "Controls.4b712e02.js",
       "inject_styles.5607aec6.js",
       "nextgeneration-5a4ee21a.css"
     ],
     "raisedbywolves.svelte": [
-      "raisedbywolves.0a79c629.js",
-      "Controls.0752ead6.js",
+      "raisedbywolves.3ad4ff0a.js",
+      "Controls.4b712e02.js",
       "inject_styles.5607aec6.js",
       "raisedbywolves-d98e5698.css"
     ],
     "alteredcarbon.svelte": [
-      "alteredcarbon.00fd6ed6.js",
-      "Controls.0752ead6.js",
+      "alteredcarbon.deacfabc.js",
+      "Controls.4b712e02.js",
       "inject_styles.5607aec6.js",
       "alteredcarbon-a873ee0c.css"
     ],
     "forallmankind.svelte": [
-      "forallmankind.b72d8738.js",
-      "Controls.0752ead6.js",
+      "forallmankind.84826646.js",
+      "Controls.4b712e02.js",
       "inject_styles.5607aec6.js",
       "forallmankind-cf37355f.css"
     ],
     "indianajones.svelte": [
-      "indianajones.2366b7c3.js",
-      "Controls.0752ead6.js",
+      "indianajones.71e8e162.js",
+      "Controls.4b712e02.js",
       "inject_styles.5607aec6.js",
       "indianajones-c8ce031b.css"
     ],
     "jurassicpark.svelte": [
-      "jurassicpark.d91fc080.js",
-      "Controls.0752ead6.js",
+      "jurassicpark.ab34074f.js",
+      "Controls.4b712e02.js",
       "inject_styles.5607aec6.js",
       "jurassicpark-c8ce031b.css"
     ],
     "alienworlds.svelte": [
-      "alienworlds.46b3571d.js",
-      "Controls.0752ead6.js",
+      "alienworlds.1817f7a1.js",
+      "Controls.4b712e02.js",
       "inject_styles.5607aec6.js",
       "alienworlds-cf37355f.css"
     ],
     "brucewillis.svelte": [
-      "brucewillis.b1473f46.js",
-      "Controls.0752ead6.js",
+      "brucewillis.5d0a36d9.js",
+      "Controls.4b712e02.js",
       "inject_styles.5607aec6.js",
       "brucewillis-c8ce031b.css"
     ],
     "documentary.svelte": [
-      "documentary.d12f7f83.js",
-      "Controls.0752ead6.js",
+      "documentary.15ff9e4c.js",
+      "Controls.4b712e02.js",
       "inject_styles.5607aec6.js",
       "documentary-c8ce031b.css"
     ],
     "harrypotter.svelte": [
-      "harrypotter.67fca597.js",
-      "Controls.0752ead6.js",
+      "harrypotter.92123ced.js",
+      "Controls.4b712e02.js",
       "inject_styles.5607aec6.js",
       "harrypotter-c8ce031b.css"
     ],
     "lostinspace.svelte": [
-      "lostinspace.689bc07c.js",
-      "Controls.0752ead6.js",
+      "lostinspace.b01063c5.js",
+      "Controls.4b712e02.js",
       "inject_styles.5607aec6.js",
       "lostinspace-cf37355f.css"
     ],
     "mandalorian.svelte": [
-      "mandalorian.a348f239.js",
-      "Controls.0752ead6.js",
+      "mandalorian.4c514734.js",
+      "Controls.4b712e02.js",
       "inject_styles.5607aec6.js",
       "mandalorian-0f4a0c67.css"
     ],
     "enterprise.svelte": [
-      "enterprise.877055e4.js",
-      "Controls.0752ead6.js",
+      "enterprise.0e95db35.js",
+      "Controls.4b712e02.js",
       "inject_styles.5607aec6.js",
       "enterprise-cf37355f.css"
     ],
     "lowerdecks.svelte": [
-      "lowerdecks.e5bf9ccf.js",
-      "Controls.0752ead6.js",
+      "lowerdecks.78b7c87a.js",
+      "Controls.4b712e02.js",
       "inject_styles.5607aec6.js",
       "lowerdecks-8a992b4d.css"
     ],
     "meninblack.svelte": [
-      "meninblack.96fb0590.js",
-      "Controls.0752ead6.js",
+      "meninblack.f7a5ee73.js",
+      "Controls.4b712e02.js",
       "inject_styles.5607aec6.js",
       "meninblack-c8ce031b.css"
     ],
     "seancarrol.svelte": [
-      "seancarrol.95830af5.js",
-      "Controls.0752ead6.js",
+      "seancarrol.e453146a.js",
+      "Controls.4b712e02.js",
       "inject_styles.5607aec6.js",
       "seancarrol-17123950.css"
     ],
     "superheros.svelte": [
-      "superheros.62bb485f.js",
-      "Controls.0752ead6.js",
+      "superheros.6a8d1eab.js",
+      "Controls.4b712e02.js",
       "inject_styles.5607aec6.js",
       "superheros-c8ce031b.css"
     ],
     "discovery.svelte": [
-      "discovery.e57f2e52.js",
-      "Controls.0752ead6.js",
+      "discovery.27c35116.js",
+      "Controls.4b712e02.js",
       "inject_styles.5607aec6.js",
       "discovery-c6aa3fee.css"
     ],
     "johnwayne.svelte": [
-      "johnwayne.b8c8d6a0.js",
-      "Controls.0752ead6.js",
+      "johnwayne.b7fa1da7.js",
+      "Controls.4b712e02.js",
       "inject_styles.5607aec6.js",
       "johnwayne-c8ce031b.css"
     ],
     "spacetime.svelte": [
-      "spacetime.d118cef1.js",
-      "Controls.0752ead6.js",
+      "spacetime.02077178.js",
+      "Controls.4b712e02.js",
       "inject_styles.5607aec6.js",
       "spacetime-3a256f7d.css"
     ],
     "tomcruize.svelte": [
-      "tomcruize.14d7be6d.js",
-      "Controls.0752ead6.js",
+      "tomcruize.acf6b96c.js",
+      "Controls.4b712e02.js",
       "inject_styles.5607aec6.js",
       "tomcruize-c8ce031b.css"
     ],
     "cartoons.svelte": [
-      "cartoons.636ee198.js",
-      "Controls.0752ead6.js",
+      "cartoons.73ffb57a.js",
+      "Controls.4b712e02.js",
       "inject_styles.5607aec6.js",
       "cartoons-c8ce031b.css"
     ],
     "godzilla.svelte": [
-      "godzilla.2f6d84da.js",
-      "Controls.0752ead6.js",
+      "godzilla.cddd9762.js",
+      "Controls.4b712e02.js",
       "inject_styles.5607aec6.js",
       "godzilla-61c8d936.css"
     ],
     "johnwick.svelte": [
-      "johnwick.0e606fcc.js",
-      "Controls.0752ead6.js",
+      "johnwick.811d50a7.js",
+      "Controls.4b712e02.js",
       "inject_styles.5607aec6.js",
       "johnwick-c8ce031b.css"
     ],
     "kingsmen.svelte": [
-      "kingsmen.514410c2.js",
-      "Controls.0752ead6.js",
+      "kingsmen.0e6c41aa.js",
+      "Controls.4b712e02.js",
       "inject_styles.5607aec6.js",
       "kingsmen-c8ce031b.css"
     ],
     "lastship.svelte": [
-      "lastship.edd541d3.js",
-      "Controls.0752ead6.js",
+      "lastship.c087e5a7.js",
+      "Controls.4b712e02.js",
       "inject_styles.5607aec6.js",
       "lastship-8a992b4d.css"
     ],
     "startrek.svelte": [
-      "startrek.f8fa93c1.js",
-      "Controls.0752ead6.js",
+      "startrek.defa16fc.js",
+      "Controls.4b712e02.js",
       "inject_styles.5607aec6.js",
       "startrek-c8ce031b.css"
     ],
     "starwars.svelte": [
-      "starwars.f5f1fda2.js",
-      "Controls.0752ead6.js",
+      "starwars.0c8183be.js",
+      "Controls.4b712e02.js",
       "inject_styles.5607aec6.js",
       "starwars-c8ce031b.css"
     ],
     "fantasy.svelte": [
-      "fantasy.0e5ef05b.js",
-      "Controls.0752ead6.js",
+      "fantasy.8f3a5102.js",
+      "Controls.4b712e02.js",
       "inject_styles.5607aec6.js",
       "fantasy-c8ce031b.css"
     ],
     "orville.svelte": [
-      "orville.2493a3fb.js",
-      "Controls.0752ead6.js",
+      "orville.ca8da6b7.js",
+      "Controls.4b712e02.js",
       "inject_styles.5607aec6.js",
       "orville-cf37355f.css"
     ],
     "pirates.svelte": [
-      "pirates.5147be3b.js",
-      "Controls.0752ead6.js",
+      "pirates.96bd8877.js",
+      "Controls.4b712e02.js",
       "inject_styles.5607aec6.js",
       "pirates-c8ce031b.css"
     ],
     "riddick.svelte": [
-      "riddick.759113c5.js",
-      "Controls.0752ead6.js",
+      "riddick.c5f85375.js",
+      "Controls.4b712e02.js",
       "inject_styles.5607aec6.js",
       "riddick-c8ce031b.css"
     ],
     "therock.svelte": [
-      "therock.bca76c90.js",
-      "Controls.0752ead6.js",
+      "therock.0e6be406.js",
+      "Controls.4b712e02.js",
       "inject_styles.5607aec6.js",
       "therock-c8ce031b.css"
     ],
     "tremors.svelte": [
-      "tremors.d6e08b19.js",
-      "Controls.0752ead6.js",
+      "tremors.507f5283.js",
+      "Controls.4b712e02.js",
       "inject_styles.5607aec6.js",
       "tremors-c8ce031b.css"
     ],
     "tvshows.svelte": [
-      "tvshows.e5d70086.js",
-      "Controls.0752ead6.js",
+      "tvshows.92f99348.js",
+      "Controls.4b712e02.js",
       "inject_styles.5607aec6.js"
     ],
     "voyager.svelte": [
-      "voyager.4934123d.js",
-      "Controls.0752ead6.js",
+      "voyager.1449a673.js",
+      "Controls.4b712e02.js",
       "inject_styles.5607aec6.js",
       "voyager-1ca36e82.css"
     ],
     "action.svelte": [
-      "action.f3412ea2.js",
-      "Controls.0752ead6.js",
+      "action.ab9cad2e.js",
+      "Controls.4b712e02.js",
       "inject_styles.5607aec6.js",
       "action-302e0479.css"
     ],
     "comedy.svelte": [
-      "comedy.fec939e4.js",
-      "Controls.0752ead6.js",
+      "comedy.0525e87a.js",
+      "Controls.4b712e02.js",
       "inject_styles.5607aec6.js",
       "comedy-c8ce031b.css"
     ],
     "picard.svelte": [
-      "picard.19d6775f.js",
-      "Controls.0752ead6.js",
+      "picard.8e99cf2b.js",
+      "Controls.4b712e02.js",
       "inject_styles.5607aec6.js",
       "picard-f4a03735.css"
     ],
     "drama.svelte": [
-      "drama.466aa2a3.js",
-      "Controls.0752ead6.js",
+      "drama.415f054f.js",
+      "Controls.4b712e02.js",
       "inject_styles.5607aec6.js",
       "drama-c8ce031b.css"
     ],
     "scifi.svelte": [
-      "scifi.4c67497d.js",
-      "Controls.0752ead6.js",
+      "scifi.585d2264.js",
+      "Controls.4b712e02.js",
       "inject_styles.5607aec6.js",
       "scifi-c8ce031b.css"
     ],
     "misc.svelte": [
-      "misc.9a3898a4.js",
-      "Controls.0752ead6.js",
+      "misc.f66191ee.js",
+      "Controls.4b712e02.js",
       "inject_styles.5607aec6.js",
       "misc-c8ce031b.css"
     ],
     "sttv.svelte": [
-      "sttv.a8721bce.js",
-      "Controls.0752ead6.js",
+      "sttv.1e2ecbfc.js",
+      "Controls.4b712e02.js",
       "inject_styles.5607aec6.js",
       "sttv-cf37355f.css"
     ],
     "xmen.svelte": [
-      "xmen.92fc8b21.js",
-      "Controls.0752ead6.js",
+      "xmen.2d05a43b.js",
+      "Controls.4b712e02.js",
       "inject_styles.5607aec6.js",
       "xmen-c8ce031b.css"
     ]
