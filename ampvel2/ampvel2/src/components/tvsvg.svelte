@@ -19,11 +19,13 @@
 
 	<a href="discovery"><text x="0" y="64" font-size="1em" fill="grey">Discovery</text></a>
 	<a href="lowerdecks"><text x="100" y="64" font-size="1em" fill="grey">Lower Decks</text></a>
-	<a href="lastship"><text x="205" y="64" font-size="1em" fill="grey">The Last Ship</text></a>
+	<a href="lastship"><text x="202" y="64" font-size="1em" fill="grey">The Last Ship</text></a>
 
 	<a href="spacetime"><text x="0" y="82" font-size="1em" fill="grey">SpaceTime</text></a>
 	<a href="seancarrol"><text x="100" y="82" font-size="1em" fill="grey">Sean Carroll</text></a>
 	<a href="enterprise"><text x="223" y="82" font-size="1em" fill="grey">Enterprise</text></a>
+
+	<a href="forallmankind"><text x="0" y="102" font-size="1em" fill="grey">For All Man Kind</text></a>
 
 	Sorry, your browser does not support inline SVG.  
 </svg>

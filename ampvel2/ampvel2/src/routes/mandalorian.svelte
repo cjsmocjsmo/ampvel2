@@ -93,10 +93,10 @@
 </ul>
 
 <style>
-    span {
+    /* span {
         margin-left: 20px;
         color: white;
-    }
+    } */
 
     ul {
         list-style: none;
