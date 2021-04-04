@@ -1,5 +1,6 @@
 <script>
     import Controls from '../components/Controls.svelte'
+    import voy from "../../static/voyager.jpg"
     let VOYshowlist;
     let VOYshowlistcount;
     let visibleVoy = false
@@ -59,26 +60,18 @@
     }
 
     let handlePlayVOY = (media) => {
-        // if (LP) {
-        //     console.log(media)
-
-        //     let foo = media.split("TVShows", 2)
-        //     let newpath = `http://192.168.0.42:8063` + media
-        //     console.log(newpath)
-        //     TVlocalplayURL.set(newpath)
-        //     visibleVOY = false
-        // } else {
-            let promise = getPlayMedia(media).catch(err => console.log(err));
-            visibleVOY = false
-        // }
+        let promise = getPlayMedia(media).catch(err => console.log(err));
+        visibleVOY = false
     }
+
 </script>
+
 <svelte:head>
 	<title>Voyager</title>
 </svelte:head>
 
-<h1>Voyager</h1>
-<Controls />
+<img class="mypic" src={voy} alt="fuck" />
+
 <svg viewBox="0 0 273 100">
     <rect on:click={handleVOY1} x="0" y="0" width="32%" height="30" style="fill:rgb(0,0,255);stroke-width:1;stroke:rgb(0,0,0)" />
     <rect on:click={handleVOY2} x="97" y="0" width="32%" height="30" style="fill:red;stroke-width:1;stroke:rgb(0,0,0)" />
@@ -111,11 +104,15 @@
     {/if}
 </ul>
 
+<Controls />
+
 <style>
+
     span {
         margin-right: 20px;
         color: white;
     }
+
     ul {
         list-style: none;
     }
@@ -125,24 +122,18 @@
         text-decoration: none;
         
     }
+
     a {
         color:white;
         font-size: 22px;
     }
 
-    h1 {
-        color: white;
+    .mypic {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 30%;
+        margin-bottom: 2em;
     }
-    /* button {
-        width:45%;
-        padding:7px;
-        margin:.5px;
-        background-color: rgb(192, 62, 153);
-        font-size: 16px;
-        font-weight: bold;
-    }
-    .baz {
-        width:32%;
-        margin:.5px;
-    } */
+
 </style>

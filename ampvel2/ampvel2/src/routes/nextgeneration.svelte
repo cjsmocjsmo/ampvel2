@@ -1,5 +1,6 @@
 <script>
     import Controls from '../components/Controls.svelte'
+    import nextgen from "../../static/nextgen.jpg"
     let TNGshowlist;
     let TNGshowlistcount;
     let visibleTNG = false
@@ -73,13 +74,15 @@
             visibleTNG = false
         // }
     }
+
 </script>
+
 <svelte:head>
 	<title>Next Generation</title>
 </svelte:head>
 
-<h1>The Next Generation</h1>
-<Controls />
+<img class="mypic" src={nextgen} alt="fuck" />
+
 <svg viewBox="0 0 273 100">
     <rect on:click={handleTNG1} x="0" y="0" width="32%" height="30" style="fill:rgb(0,0,255);stroke-width:1;stroke:rgb(0,0,0)" />
     <rect on:click={handleTNG2} x="97" y="0" width="32%" height="30" style="fill:red;stroke-width:1;stroke:rgb(0,0,0)" />
@@ -100,18 +103,6 @@
     <text on:click={handleTNG6} x="210" y="51" font-size=".7em" fill="white">Season 6</text>
     <text on:click={handleTNG7} x="120" y="85" font-size=".7em" fill="white">Season 7</text>
 </svg> 
-<!-- <nav>
-    <button class="boo" on:click={handleTNG1}>Season 1</button>
-    <button class="boo" on:click={handleTNG2}>Season 2</button>
-    <button class="boo" on:click={handleTNG3}>Season 3</button>
-</nav> -->
-<!-- <nav>
-    
-    <button class="boo" on:click={handleTNG4}>Season 4</button>
-    <button class="boo" on:click={handleTNG5}>Season 5</button>
-    <button class="boo" on:click={handleTNG6}>Season 6</button>
-    <button class="bar" on:click={handleTNG7}>Season 7</button>
-</nav> -->
 
 <ul>
     {#if TNGshowlistcount > 0}
@@ -124,8 +115,10 @@
     {/if}
 </ul>
 
+<Controls />
 
 <style>
+
     span {
         margin-right: 20px;
         color: white;
@@ -145,9 +138,12 @@
         font-size: 22px;
     }
 
-
-    h1 {
-        color: white;
+    .mypic {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 30%;
+        margin-bottom: 2em;
     }
 
 </style>

@@ -1,5 +1,6 @@
 <script>
     import Controls from '../components/Controls.svelte'
+    import sttv from "../../static/sttv.jpg"
     let showlist;
     let showlistcount;
     let visibleDis = false
@@ -59,12 +60,13 @@
         // }
     }
 </script>
+
 <svelte:head>
 	<title>STTV</title>
 </svelte:head>
 
-<h1>Star Trek</h1>
-<Controls />
+<img class="mypic" src={sttv} alt="fuck" />
+
 <svg viewBox="0 0 273 32">
     <rect on:click={handleSTTVClick1} x="0" y="0" width="32%" height="30" style="fill:rgb(0,0,255);stroke-width:1;stroke:rgb(0,0,0)" />
     <rect on:click={handleSTTVClick2} x="97" y="0" width="32%" height="30" style="fill:red;stroke-width:1;stroke:rgb(0,0,0)" />
@@ -86,12 +88,6 @@
     <text x="120" y="85" font-size=".7em" fill="white">Season 7</text>
 </svg> 
 
-<!-- <nav>
-    <button class="baz" on:click={handleSTTVClick1}>Season 1</button>
-    <button class="baz" on:click={handleSTTVClick2}>Season 2</button>
-    <button class="baz" on:click={handleSTTVClick3}>Season 3</button>
-</nav> -->
-
 <ul>
     {#if showlistcount > 0}
         {#each showlist as sshow }
@@ -103,12 +99,15 @@
     {/if}
 </ul>
 
+<Controls />
 
 <style>
+
     span {
         margin-right: 20px;
         color: white;
     }
+
     ul {
         list-style: none;
     }
@@ -118,13 +117,18 @@
         text-decoration: none;
         
     }
+
     a {
         color:white;
         font-size: 22px;
     }
 
-    h1 {
-        color: white;
+    .mypic {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 30%;
+        margin-bottom: 2em;
     }
 
 </style>

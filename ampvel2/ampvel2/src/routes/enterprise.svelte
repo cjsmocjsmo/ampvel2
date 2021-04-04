@@ -1,5 +1,6 @@
 <script>
     import Controls from '../components/Controls.svelte'
+    import ent from "../../static/enterprise.jpg"
     let showlist;
     let showlistcount;
     let visibleDis = false
@@ -55,9 +56,7 @@
 	<title>Star Trek</title>
 </svelte:head>
 
-<h1>Star Trek</h1>
-
-<Controls />
+<img class="mypic" src={ent} alt="fuck" />
 
 <svg viewBox="0 0 273 32">
     <rect on:click={handleEnterpriseClick1} x="0" y="0" width="32%" height="30" style="fill:rgb(0,0,255);stroke-width:1;stroke:rgb(0,0,0)" />
@@ -90,7 +89,7 @@
         {/each}
     {/if}
 </ul>
-
+<Controls />
 <style>
 
     span {
@@ -107,14 +106,18 @@
         text-decoration: none;
         
     }
-    
+
     a {
         color:white;
         font-size: 22px;
     }
 
-    h1 {
-        color: white;
+    .mypic {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 30%;
+        margin-bottom: 2em;
     }
 
 </style>
