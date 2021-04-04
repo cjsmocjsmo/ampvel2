@@ -45,26 +45,20 @@
     }
 
     let handlePlayShowEnterprise = (media) => {
-        // if (LP) {
-        //     console.log(media)
-
-        //     let foo = media.split("TVShows", 2)
-        //     let newpath = `http://192.168.0.42:8063` + media
-        //     console.log(newpath)
-        //     TVlocalplayURL.set(newpath)
-        //     visibleDis = false
-        // } else {
         let promise = getPlayMedia(media).catch(err => console.log(err));
         visibleDis = false
-        // }
     }
+
 </script>
+
 <svelte:head>
 	<title>Star Trek</title>
 </svelte:head>
 
 <h1>Star Trek</h1>
+
 <Controls />
+
 <svg viewBox="0 0 273 32">
     <rect on:click={handleEnterpriseClick1} x="0" y="0" width="32%" height="30" style="fill:rgb(0,0,255);stroke-width:1;stroke:rgb(0,0,0)" />
     <rect on:click={handleEnterpriseClick2} x="97" y="0" width="32%" height="30" style="fill:red;stroke-width:1;stroke:rgb(0,0,0)" />
@@ -84,13 +78,7 @@
     <text x="120" y="51" font-size=".7em" fill="white">Season 5</text>
     <text x="210" y="51" font-size=".7em" fill="white">Season 6</text>
     <text x="120" y="85" font-size=".7em" fill="white">Season 7</text>
-</svg> 
-
-<!-- <nav>
-    <button class="baz" on:click={handleEnterpriseClick1}>Season 1</button>
-    <button class="baz" on:click={handleEnterpriseClick2}>Season 2</button>
-    <button class="baz" on:click={handleEnterpriseClick3}>Season 3</button>
-</nav> -->
+</svg>
 
 <ul>
     {#if showlistcount > 0}
@@ -103,12 +91,13 @@
     {/if}
 </ul>
 
-
 <style>
+
     span {
         margin-right: 20px;
         color: white;
     }
+
     ul {
         list-style: none;
     }
@@ -118,6 +107,7 @@
         text-decoration: none;
         
     }
+    
     a {
         color:white;
         font-size: 22px;

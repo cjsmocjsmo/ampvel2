@@ -1,5 +1,6 @@
 <script>
     import Controls from '../components/Controls.svelte'
+    import fws from "../../static/falconwintersoldier.jpg"
     let FWSshowlist;
     let FWSshowlistcount;
     let visibleOrv = false
@@ -17,19 +18,11 @@
     let handleFWS1 = () => {
         let promise = getFalconWinterSoldier(`01`).catch(err => console.log(err));
     }
-    let handleFWS2 = () => {
-        let promise = getFalconWinterSoldier(`02`).catch(err => console.log(err));
-    }
+    // let handleFWS2 = () => {
+    //     let promise = getFalconWinterSoldier(`02`).catch(err => console.log(err));
+    // }
     // let handleFWS3 = () => {
     //     let promise = getFalconWinterSoldier(`03`).catch(err => console.log(err));
-    // }
-
-    // let fuckOrv = () => {
-    //     if (visibleOrv) {
-    //         visibleOrv = false
-    //     } else {
-    //         visibleOrv = true
-    //     }
     // }
 
     async function getPlayMedia(x) {
@@ -43,17 +36,10 @@
     }
 
     let handlePlayShowOr = (media) => {
-        // if (LP) {
-        //     let foo = media.split("TVShows", 2)
-        //     let newpath = `http://192.168.0.42:8063` + media
-        //     TVlocalplayURL.set(newpath)
-        //     visibleOrv = false
-        // } else {
-            let promise = getPlayMedia(media).catch(err => console.log(err));
-            visibleOrv = false
-        // }
+        let promise = getPlayMedia(media).catch(err => console.log(err));
+        visibleOrv = false
     }
-    import fws from "../../static/falconwintersoldier.jpg"
+    
 </script>
 
 <svelte:head>
@@ -61,8 +47,6 @@
 </svelte:head>
 
 <img class="mypic" src={fws} alt="fuck" />
-
-<!-- <h1>The Falcon And The Winter Soldier</h1> -->
 
 <svg viewBox="0 0 273 34">
     <rect on:click={handleFWS1} x="0" y="0" width="100%" height="30" style="fill:rgb(0,0,255);stroke-width:1;stroke:rgb(0,0,0)" />
@@ -83,14 +67,16 @@
         {/each}
     {/if}
 </ul>
+
 <Controls />
 
-
 <style>
+
     span {
         margin-right: 20px;
         color: white;
     }
+
     ul {
         list-style: none;
     }
@@ -100,14 +86,12 @@
         text-decoration: none;
         
     }
+
     a {
         color:white;
         font-size: 22px;
     }
-
-    /* h1 {
-        color: white;
-    } */
+    
     .mypic {
         display: block;
         margin-left: auto;
@@ -115,4 +99,5 @@
         width: 30%;
         margin-bottom: 2em;
     }
+
 </style>
