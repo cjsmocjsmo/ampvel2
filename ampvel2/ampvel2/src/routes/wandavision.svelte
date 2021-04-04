@@ -1,30 +1,31 @@
 <script>
     import Controls from '../components/Controls.svelte'
-    let showlist;
-    let showlistcount;
+    let WVshowlist;
+    let WVshowlistcount;
     let visibleDis = false
 
     // onMount(
         async function getWandaVision(x) {
+            console.log(x)
             let addr = `http://192.168.0.42:8888/intWandaVision?season=${x}`
             fetch(addr, {mode: "cors", method: "GET"})
             .then(r => r.json())
             .then(data => {
                 console.log(data)
                 console.log(data[0].episode)
-                showlist = data
-                showlistcount = data.length
+                WVshowlist = data
+                WVshowlistcount = data.length
             }).catch(err => console.log(err));
         }
     //)
 
     let handleWandaVision1 = () => {
-        let promise = getWandaVision(`01`).catch(err => console.log(err));
+        let promise = getWandaVision("01").catch(err => console.log(err));
     }
-
-    let handleWandaVision2 = () => {
-        let promise = getWandaVision(`02`).catch(err => console.log(err));
-    }
+//
+    // let handleFuck2 = () => {
+    //     let promise = getWandaVision(`02`).catch(err => console.log(err));
+    // }
 
     let fuckDis = () => {
         if (visibleDis) {
@@ -62,36 +63,25 @@
         // }
         
     }
+    import wv from "../../static/wandavision.jpg"
 </script>
 <svelte:head>
 	<title>WandaVision</title>
 </svelte:head>
 
+<img class="mypic" src={wv} alt="fuck" />
+<!-- <h1>WandaVision</h1> -->
 
-<h1>WandaVision</h1>
-<Controls />
 <svg viewBox="0 0 273 35">
-    <rect on:click={handleWandaVision1} x="0" y="0" width="49%" height="30" style="fill:rgb(0,0,255);stroke-width:1;stroke:rgb(0,0,0)" />
-    <rect on:click={handleWandaVision2} x="135" y="0" width="49%" height="30" style="fill:red;stroke-width:1;stroke:rgb(0,0,0)" />
-    <text on:click={handleWandaVision1} x="48" y="18" font-size=".7em" fill="white">Season 1</text>
-    <text on:click={handleWandaVision2} x="177" y="18" font-size=".7em" fill="white">Season 2</text>
+    <rect on:click={handleWandaVision1} x="0" y="0" width="100%" height="30" style="fill:rgb(0,0,255);stroke-width:1;stroke:rgb(0,0,0)" />
+    <!-- <rect on:click={handleFuck2} x="135" y="0" width="49%" height="30" style="fill:red;stroke-width:1;stroke:rgb(0,0,0)" /> -->
+    <text on:click={handleWandaVision1} x="110" y="18" font-size=".7em" fill="white">Season 1</text>
+    <!-- <text on:click={handleFuck2} x="177" y="18" font-size=".7em" fill="white">Season 2</text> -->
 </svg> 
-<!-- <nav>
-    <button>Season 1</button>
-    <button>Season 2</button>
-</nav> -->
-<!-- <nav>
-    <button class="boo">Season 1</button>
-    <button class="boo">Season 2</button>
-    <button class="boo">Season 3</button>
-</nav> -->
-<!-- <nav>
-    <button on:click={handleWandaVision1}>s1</button>
-    <button on:click={handleWandaVision2}>s2</button>
-</nav> -->
+
 <ul>
-    {#if showlistcount > 0}
-        {#each showlist as sshow }
+    {#if WVshowlistcount > 0}
+        {#each WVshowlist as sshow }
             <li>
                 <span>{sshow.episode}</span>
                 <a href="tvshows" on:click={handlePlayShow(sshow.tvfspath)}>{sshow.title}</a>
@@ -99,7 +89,7 @@
         {/each}
     {/if}
 </ul>
-
+<Controls />
 <style>
     span {
         margin-right: 20px;
@@ -119,9 +109,16 @@
         color:white;
         font-size: 22px;
     }
-
-
-    h1 {
-        color: white;
+    .mypic {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 30%;
+        margin-bottom: 2em;
     }
+
+    /* h1 {
+        color: white;
+    } */
+
 </style>

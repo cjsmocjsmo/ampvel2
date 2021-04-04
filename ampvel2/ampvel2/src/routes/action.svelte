@@ -28,7 +28,6 @@ const unsubmovaddr = movaddr.subscribe(value => {
   movaddr_value = value
 })
 
-
 async function getPlayMov(mov) {
 	let addr = `${omxaddr_value}/playMediaReact?movie=${mov}`
 	console.log(addr)
@@ -39,50 +38,26 @@ async function getPlayMov(mov) {
 	}).catch(err => console.log(err));
 }
 let handlegetMovClick = (x) => {
-	// if (movLOCALPLAY) {
-	// 	let foo = x.split("Movies", 2)
-	// 	let newpath = movaddr_value + foo[1]
-	// 	localplayURL.set(newpath)
-	// 	console.log(newpath)
-	// } else {
-		let promise = getPlayMov(x).catch(err => console.log(err));
-	// }
+	let promise = getPlayMov(x).catch(err => console.log(err));
 }
 
-
-
-
-
-
-
 </script>
+
 <svelte:head>
 	<title>Action</title>
 </svelte:head>
 
-
-<!-- <nav> -->
-	<button class="b1"><a href=".">Back</a></button>
-	<h1>Action</h1>
-<!-- </nav> -->
-	<Controls />
-	{#each NewDat as N}
-		<img on:click={handlegetMovClick(N["movfspath"])} src={N["thumbpath"]} alt="fucked up"/>
-	{/each}
-	<Controls />
+<button class="b1"><a href=".">Back</a></button>
+<h1>Action</h1>
+<Controls />
+{#each NewDat as N}
+	<img on:click={handlegetMovClick(N["movfspath"])} src={N["thumbpath"]} alt="fucked up"/>
+{/each}
+<Controls />
 <nav>
 	<button class="b1"><a href=".">Back</a></button>
 	<button><a href=".">Back</a></button>
 </nav>
-
-
-
-    <!-- <nav>
-        {#each MYDATA as mydat}
-            <img on:click={handlegetMovClick(mydat[6])}  src={mydat[9]} alt={mydat[7]}/>
-        {/each}
-    </nav> -->
-
 
 <style>
 
@@ -95,17 +70,19 @@ let handlegetMovClick = (x) => {
         height: 195px;
         padding: 1px;
     }
-    
 
 	.b1 {
 		float:right;
 	}
+
 	h1 {
 		color: white;
 	}
+
 	img {
         width: 130px;
         height: 195px;
         padding: 1px;
     }
+
 </style>

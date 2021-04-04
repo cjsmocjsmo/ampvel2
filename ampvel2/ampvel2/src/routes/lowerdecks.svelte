@@ -62,33 +62,22 @@
         // }
         
     }
+    import ldeck from "../../static/lowerdecks.jpg"
 </script>
 <svelte:head>
 	<title>Lower Decks</title>
 </svelte:head>
 
+<img class="mypic" src={ldeck} alt="fuck" />
+<!-- <h1>Lower Decks</h1> -->
 
-<h1>Lower Decks</h1>
-<Controls />
 <svg viewBox="0 0 273 35">
     <rect on:click={handleLowerDecks1} x="0" y="0" width="49%" height="30" style="fill:rgb(0,0,255);stroke-width:1;stroke:rgb(0,0,0)" />
     <rect on:click={handleLowerDecks2} x="135" y="0" width="49%" height="30" style="fill:red;stroke-width:1;stroke:rgb(0,0,0)" />
     <text on:click={handleLowerDecks1} x="48" y="18" font-size=".7em" fill="white">Season 1</text>
     <text on:click={handleLowerDecks2} x="177" y="18" font-size=".7em" fill="white">Season 2</text>
 </svg> 
-<!-- <nav>
-    <button>Season 1</button>
-    <button>Season 2</button>
-</nav> -->
-<!-- <nav>
-    <button class="boo">Season 1</button>
-    <button class="boo">Season 2</button>
-    <button class="boo">Season 3</button>
-</nav> -->
-<!-- <nav>
-    <button on:click={handleLowerDecks1}>s1</button>
-    <button on:click={handleLowerDecks2}>s2</button>
-</nav> -->
+
 <ul>
     {#if showlistcount > 0}
         {#each showlist as sshow }
@@ -99,7 +88,7 @@
         {/each}
     {/if}
 </ul>
-
+<Controls />
 <style>
     span {
         margin-right: 20px;
@@ -121,7 +110,14 @@
     }
 
 
-    h1 {
+    /* h1 {
         color: white;
+    } */
+    .mypic {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 30%;
+        margin-bottom: 2em;
     }
 </style>

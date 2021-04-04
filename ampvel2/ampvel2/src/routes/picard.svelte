@@ -62,13 +62,16 @@
         // }
         
     }
+    import picard from "../../static/picard.jpg"
 </script>
 <svelte:head>
 	<title>Picard</title>
 </svelte:head>
 
-<h1>Picard</h1>
-<Controls />
+<img class="mypic" src={picard} alt="fuck" />
+
+<!-- <h1>Picard</h1> -->
+
 <svg viewBox="0 0 273 35">
     <rect on:click={handlePicard1} x="0" y="0" width="49%" height="30" style="fill:rgb(0,0,255);stroke-width:1;stroke:rgb(0,0,0)" />
     <rect on:click={handlePicard2} x="135" y="0" width="49%" height="30" style="fill:red;stroke-width:1;stroke:rgb(0,0,0)" />
@@ -87,6 +90,7 @@
         {/each}
     {/if}
 </ul>
+<Controls />
 <style>
     span {
         margin-right: 20px;
@@ -106,8 +110,14 @@
         font-size: 22px;
     }
 
-    h1 {
+    /* h1 {
         color: white;
+    } */
+    .mypic {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 30%;
+        margin-bottom: 2em;
     }
-
 </style>

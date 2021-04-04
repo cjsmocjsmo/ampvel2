@@ -19,7 +19,6 @@
 	console.log(NewDat)
 })
 
-
 let omxaddr_value;
 const unsubampvel = omxaddr.subscribe(value => {
   omxaddr_value = value
@@ -29,7 +28,6 @@ let movaddr_value;
 const unsubmovaddr = movaddr.subscribe(value => {
   movaddr_value = value
 })
-
 
 async function getPlayMov(mov) {
 	let addr = `${omxaddr_value}/playMediaReact?movie=${mov}`
@@ -41,14 +39,7 @@ async function getPlayMov(mov) {
 	}).catch(err => console.log(err));
 }
 let handlegetMovClick = (x) => {
-	// if (movLOCALPLAY) {
-	// 	let foo = x.split("Movies", 2)
-	// 	let newpath = movaddr_value + foo[1]
-	// 	localplayURL.set(newpath)
-	// 	console.log(newpath)
-	// } else {
-		let promise = getPlayMov(x).catch(err => console.log(err));
-	// }
+	let promise = getPlayMov(x).catch(err => console.log(err));
 }
 
 </script>
@@ -70,15 +61,19 @@ let handlegetMovClick = (x) => {
 </nav>
 
 <style>
+
 	.b1 {
 		float:right;
 	}
+
 	h1 {
 		color: white;
 	}
+
 	img {
         width: 130px;
         height: 195px;
         padding: 1px;
     }
+	
 </style>

@@ -53,13 +53,16 @@
             visibleOrv = false
         // }
     }
+    import orv from "../../static/orville.jpg"
 </script>
 <svelte:head>
 	<title>The Orville</title>
 </svelte:head>
 
-<h1>The Orville</h1>
-<Controls />
+<img class="mypic" src={orv} alt="fuck" />
+
+<!-- <h1>The Orville</h1> -->
+
 <svg viewBox="0 0 273 36">
     <rect on:click={handleOR1} x="0" y="0" width="32%" height="30" style="fill:rgb(0,0,255);stroke-width:1;stroke:rgb(0,0,0)" />
     <rect on:click={handleOR2} x="97" y="0" width="32%" height="30" style="fill:red;stroke-width:1;stroke:rgb(0,0,0)" />
@@ -79,6 +82,7 @@
         {/each}
     {/if}
 </ul>
+<Controls />
 <style>
     span {
         margin-right: 20px;
@@ -98,8 +102,14 @@
         font-size: 22px;
     }
 
-    h1 {
+    /* h1 {
         color: white;
+    } */
+    .mypic {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 30%;
+        margin-bottom: 2em;
     }
-
 </style>

@@ -1,27 +1,27 @@
 <script>
     import Controls from '../components/Controls.svelte'
-    let FAMKshowlist;
-    let FAMKshowlistcount;
+    let FWSshowlist;
+    let FWSshowlistcount;
     let visibleOrv = false
 
-    async function getForAllManKind(x) {
+    async function getFalconWinterSoldier(x) {
 
-        let addr = `http://192.168.0.42:8888/intForAllManKind?season=${x}`
+        let addr = `http://192.168.0.42:8888/intFalconWinterSoldier?season=${x}`
         fetch(addr, {mode: "cors", method: "GET"})
         .then(r => r.json())
         .then(data => {
-            FAMKshowlist = data
-            FAMKshowlistcount = data.length
+            FWSshowlist = data
+            FWSshowlistcount = data.length
         }).catch(err => console.log(err));
     }
-    let handleFAMK1 = () => {
-        let promise = getForAllManKind(`01`).catch(err => console.log(err));
+    let handleFWS1 = () => {
+        let promise = getFalconWinterSoldier(`01`).catch(err => console.log(err));
     }
-    let handleFAMK2 = () => {
-        let promise = getForAllManKind(`02`).catch(err => console.log(err));
+    let handleFWS2 = () => {
+        let promise = getFalconWinterSoldier(`02`).catch(err => console.log(err));
     }
-    // let handleFAMK3 = () => {
-    //     let promise = getForAllManKind(`03`).catch(err => console.log(err));
+    // let handleFWS3 = () => {
+    //     let promise = getFalconWinterSoldier(`03`).catch(err => console.log(err));
     // }
 
     // let fuckOrv = () => {
@@ -53,29 +53,29 @@
             visibleOrv = false
         // }
     }
-
-    import foobar from "../../static/forallmankind.jpg"
+    import fws from "../../static/falconwintersoldier.jpg"
 </script>
 
-<img class="mypic" src={foobar} alt="fuck"/>
 <svelte:head>
-	<title>For All ManKind</title>
+	<title>The Falcon And The Winter Soldier</title>
 </svelte:head>
 
-<!-- <h1>For All Mankind</h1> -->
+<img class="mypic" src={fws} alt="fuck" />
+
+<!-- <h1>The Falcon And The Winter Soldier</h1> -->
 
 <svg viewBox="0 0 273 34">
-    <rect on:click={handleFAMK1} x="0" y="0" width="32%" height="30" style="fill:rgb(0,0,255);stroke-width:1;stroke:rgb(0,0,0)" />
-    <rect on:click={handleFAMK2} x="97" y="0" width="32%" height="30" style="fill:red;stroke-width:1;stroke:rgb(0,0,0)" />
-    <rect x="195" y="0" width="32%" height="30" style="fill:green;stroke-width:1;stroke:rgb(0,0,0)" />
-    <text on:click={handleFAMK1} x="23" y="18" font-size=".7em" fill="white">Season 1</text>
-    <text on:click={handleFAMK2} x="120" y="18" font-size=".7em" fill="white">Season 2</text>
-    <text x="210" y="18" font-size=".7em" fill="white">Season 3</text>
+    <rect on:click={handleFWS1} x="0" y="0" width="100%" height="30" style="fill:rgb(0,0,255);stroke-width:1;stroke:rgb(0,0,0)" />
+    <!-- <rect on:click={handleFWS2} x="97" y="0" width="32%" height="30" style="fill:red;stroke-width:1;stroke:rgb(0,0,0)" /> -->
+    <!-- <rect on:click={handleFWS3} x="195" y="0" width="32%" height="30" style="fill:green;stroke-width:1;stroke:rgb(0,0,0)" /> -->
+    <text on:click={handleFWS1} x="110" y="18" font-size=".7em" fill="white">Season 1</text>
+    <!-- <text on:click={handleFWS2} x="120" y="18" font-size=".7em" fill="white">Season 2</text> -->
+    <!-- <text on:click={handleFWS3} x="210" y="18" font-size=".7em" fill="white">Season 3</text> -->
 </svg> 
 
 <ul>
-    {#if FAMKshowlistcount > 0}
-        {#each FAMKshowlist as sshow }
+    {#if FWSshowlistcount > 0}
+        {#each FWSshowlist as sshow }
             <li>
                 <span>{sshow.episode}</span>
                 <a href="tvshows" on:click={handlePlayShowOr(sshow.tvfspath)}>{sshow.title}</a>
@@ -83,8 +83,8 @@
         {/each}
     {/if}
 </ul>
-
 <Controls />
+
 
 <style>
     span {
@@ -108,7 +108,6 @@
     /* h1 {
         color: white;
     } */
-
     .mypic {
         display: block;
         margin-left: auto;
@@ -116,5 +115,4 @@
         width: 30%;
         margin-bottom: 2em;
     }
-
 </style>

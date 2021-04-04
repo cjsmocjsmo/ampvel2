@@ -62,13 +62,16 @@
         // }
         
     }
+    import rbw from "../../static/raisedbywolves.jpg"
 </script>
 <svelte:head>
 	<title>Raised By Wolves</title>
 </svelte:head>
 
-<h1>Raised By Wolves</h1>
-<Controls />
+
+<img class="mypic" src={rbw} alt="fuck" />
+<!-- <h1>Raised By Wolves</h1> -->
+
 <svg viewBox="0 0 273 35">
     <rect on:click={handleRaisedByWolves1} x="0" y="0" width="49%" height="30" style="fill:rgb(0,0,255);stroke-width:1;stroke:rgb(0,0,0)" />
     <rect on:click={handleRaisedByWolves2} x="135" y="0" width="49%" height="30" style="fill:red;stroke-width:1;stroke:rgb(0,0,0)" />
@@ -86,7 +89,7 @@
         {/each}
     {/if}
 </ul>
-
+<Controls />
 
 <style>
     span {
@@ -107,8 +110,14 @@
         font-size: 22px;
     }
 
-    h1 {
+    /* h1 {
         color: white;
+    } */
+    .mypic {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 30%;
+        margin-bottom: 2em;
     }
- 
 </style>

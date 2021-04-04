@@ -1,21 +1,21 @@
 <script>
     import Controls from '../components/Controls.svelte'
+    import alteredcarbon from "../../static/alteredcarbon.jpg"
     let showlist;
     let showlistcount;
     let visibleDis = false
 
-        async function getAlteredCarbon(x) {
-            let addr = `http://192.168.0.42:8888/intAlteredCarbon?season=${x}`
-            fetch(addr, {mode: "cors", method: "GET"})
-            .then(r => r.json())
-            .then(data => {
-                console.log(data)
-                console.log(data[0].episode)
-                showlist = data
-                showlistcount = data.length
-            }).catch(err => console.log(err));
-        }
-
+    async function getAlteredCarbon(x) {
+        let addr = `http://192.168.0.42:8888/intAlteredCarbon?season=${x}`
+        fetch(addr, {mode: "cors", method: "GET"})
+        .then(r => r.json())
+        .then(data => {
+            console.log(data)
+            console.log(data[0].episode)
+            showlist = data
+            showlistcount = data.length
+        }).catch(err => console.log(err));
+    }
     let handleAlteredCarbon1 = () => {
         let promise = getAlteredCarbon(`01`).catch(err => console.log(err));
     }
@@ -23,14 +23,6 @@
     let handleAlteredCarbon2 = () => {
         let promise = getAlteredCarbon(`02`).catch(err => console.log(err));
     }
-
-    // let fuckDis = () => {
-    //     if (visibleDis) {
-    //         visibleDis = false
-    //     } else {
-    //         visibleDis = true
-    //     }
-    // }
 
     async function getPlayMedia(x) {
         let y = "/media/pi/PiTB/media/TVShows" + x
@@ -49,14 +41,16 @@
         let promise = getPlayMedia(media).catch(err => console.log(err));
         visibleDis = false
     }
+    
 </script>
+
 
 <svelte:head>
 	<title>Altered Carbon</title>
 </svelte:head>
 
-<h1>Altered Carbon</h1>
-<Controls />
+<img class="mypic" src={alteredcarbon} alt="fuck" />
+
 <svg viewBox="0 0 273 35">
     <rect on:click={handleAlteredCarbon1} x="0" y="0" width="49%" height="30" style="fill:rgb(0,0,255);stroke-width:1;stroke:rgb(0,0,0)" />
     <rect on:click={handleAlteredCarbon2} x="135" y="0" width="49%" height="30" style="fill:red;stroke-width:1;stroke:rgb(0,0,0)" />
@@ -74,13 +68,15 @@
         {/each}
     {/if}
 </ul>
-
+<Controls />
 
 <style>
+
     span {
         margin-right: 20px;
         color:white;
     }
+
     ul {
         list-style: none;
     }
@@ -90,13 +86,17 @@
         text-decoration: underline;
         
     }
+
     a {
         color: white;
         font-size: 22px;
     }
-
-    h1 {
-        color: white;
+    
+    .mypic {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 30%;
+        margin-bottom: 2em;
     }
-
 </style>
