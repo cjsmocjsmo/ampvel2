@@ -4,11 +4,9 @@
 
 </script>
 
-
 <svelte:head>
 	<title>TV Shows</title>
 </svelte:head>
-
 
 <TVSVG />
 <Controls />

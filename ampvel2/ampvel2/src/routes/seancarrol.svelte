@@ -4,35 +4,21 @@
     let showlistcount;
     let visibleDis = false
 
-    // onMount(
-        async function getSeanCarrol(x) {
-            let addr = `http://192.168.0.42:8888/intSeanCarrol?season=01`
-            fetch(addr, {mode: "cors", method: "GET"})
-            .then(r => r.json())
-            .then(data => {
-                console.log(data)
-                console.log(data[0].episode)
-                showlist = data
-                showlistcount = data.length
-            }).catch(err => console.log(err));
-        }
-    //)
+    async function getSeanCarrol(x) {
+        let addr = `http://192.168.0.42:8888/intSeanCarrol?season=01`
+        fetch(addr, {mode: "cors", method: "GET"})
+        .then(r => r.json())
+        .then(data => {
+            console.log(data)
+            console.log(data[0].episode)
+            showlist = data
+            showlistcount = data.length
+        }).catch(err => console.log(err));
+    }
 
     let handleSeanCarrol1 = () => {
         let promise = getSeanCarrol(`01`).catch(err => console.log(err));
     }
-
-    // let handleSeanCarrol2 = () => {
-    //     let promise = getSeanCarrol(`02`).catch(err => console.log(err));
-    // }
-
-    // let fuckDis = () => {
-    //     if (visibleDis) {
-    //         visibleDis = false
-    //     } else {
-    //         visibleDis = true
-    //     }
-    // }
 
     async function getPlayMedia(x) {
         let y = "/media/pi/PiTB/media/TVShows" + x
@@ -48,27 +34,19 @@
     }
 
      let handlePlayShow = (media) => {
-        // if (LP) {
-        //     console.log(media)
-
-        //     let foo = media.split("TVShows", 2)
-        //     let newpath = `http://192.168.0.42:8063` + "/" + media
-        //     console.log(newpath)
-        //     TVlocalplayURL.set(newpath)
-        //     visibleDis = false
-        // } else {
-            let promise = getPlayMedia(media).catch(err => console.log(err));
-            visibleDis = false
-        // }
-        
+        let promise = getPlayMedia(media).catch(err => console.log(err));
+        visibleDis = false
     }
 </script>
+
 <svelte:head>
 	<title>Sean Carrol</title>
 </svelte:head>
 
 <h1>Sean Carroll Phd</h1>
+
 <Controls />
+
 <svg viewBox="0 0 273 35">
     <rect on:click={handleSeanCarrol1} x="0" y="0" width="100%" height="30" style="fill:rgb(0,0,255);stroke-width:1;stroke:rgb(0,0,0)" />
     <!-- <rect on:click={handleSeanCarrol2} x="135" y="0" width="49%" height="30" style="fill:red;stroke-width:1;stroke:rgb(0,0,0)" />
@@ -87,12 +65,8 @@
     {/if}
 </ul>
 
-
 <style>
-    /* span {
-        margin-left: 20px;
-        color:white;
-    } */
+
     ul {
         list-style: none;
     }
@@ -102,6 +76,7 @@
         text-decoration: underline;
         
     }
+
     a {
         color: white;
         font-size: 22px;
@@ -110,18 +85,6 @@
     h1 {
         color: white;
     }
-    /* button {
-        width:99%;
-        padding:7px;
-        margin:2px;
-        background-color: rgb(192, 62, 153);
-        font-size: 16px;
-        font-weight: bold;
-    } */
-    /* .boo {
-        width:31%;
-        margin:2px;
-    } */
 
     h1 {
         color: white;

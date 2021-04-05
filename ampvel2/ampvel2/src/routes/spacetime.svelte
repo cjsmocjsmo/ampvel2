@@ -36,13 +36,17 @@
      let handlePlayShow = (media) => {
         let promise = getPlayMedia(media).catch(err => console.log(err));
     }
+
 </script>
+
 <svelte:head>
 	<title>SpaceTime</title>
 </svelte:head>
 
 <h1>PBS SpaceTime</h1>
+
 <Controls />
+
 <svg viewBox="0 0 273 35">
     <rect on:click={handleSpaceTime1} x="0" y="0" width="100%" height="30" style="fill:rgb(0,0,255);stroke-width:1;stroke:rgb(0,0,0)" />
     <text on:click={handleSpaceTime1} x="112" y="18" font-size=".7em" fill="white">Season 1</text>
@@ -58,7 +62,6 @@
     {/if}
 </ul>
 
-
 <style>
 
     ul {
@@ -70,6 +73,7 @@
         text-decoration: underline;
         
     }
+    
     a {
         color: white;
         font-size: 22px;

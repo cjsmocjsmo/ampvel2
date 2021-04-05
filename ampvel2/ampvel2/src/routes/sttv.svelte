@@ -46,19 +46,10 @@
     }
 
     let handlePlayShowSTTV = (media) => {
-        // if (LP) {
-        //     console.log(media)
-
-        //     let foo = media.split("TVShows", 2)
-        //     let newpath = `http://192.168.0.42:8063` + media
-        //     console.log(newpath)
-        //     TVlocalplayURL.set(newpath)
-        //     visibleDis = false
-        // } else {
         let promise = getPlayMedia(media).catch(err => console.log(err));
         visibleDis = false
-        // }
     }
+
 </script>
 
 <svelte:head>
@@ -115,7 +106,6 @@
     li {
         margin: 10px;
         text-decoration: none;
-        
     }
 
     a {
