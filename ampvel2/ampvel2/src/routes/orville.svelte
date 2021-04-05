@@ -82,12 +82,16 @@
         {/each}
     {/if}
 </ul>
+
 <Controls />
+
 <style>
+
     span {
         margin-right: 20px;
         color: white;
     }
+
     ul {
         list-style: none;
     }
@@ -97,14 +101,12 @@
         text-decoration: none;
         
     }
+
     a {
         color:white;
         font-size: 22px;
     }
 
-    /* h1 {
-        color: white;
-    } */
     .mypic {
         display: block;
         margin-left: auto;
@@ -112,4 +114,5 @@
         width: 30%;
         margin-bottom: 2em;
     }
+    
 </style>

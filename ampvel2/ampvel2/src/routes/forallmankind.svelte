@@ -57,12 +57,11 @@
     import foobar from "../../static/forallmankind.jpg"
 </script>
 
-<img class="mypic" src={foobar} alt="fuck"/>
 <svelte:head>
 	<title>For All ManKind</title>
 </svelte:head>
 
-<!-- <h1>For All Mankind</h1> -->
+<img class="mypic" src={foobar} alt="fuck"/>
 
 <svg viewBox="0 0 273 34">
     <rect on:click={handleFAMK1} x="0" y="0" width="32%" height="30" style="fill:rgb(0,0,255);stroke-width:1;stroke:rgb(0,0,0)" />
@@ -87,10 +86,12 @@
 <Controls />
 
 <style>
+
     span {
         margin-right: 20px;
         color: white;
     }
+
     ul {
         list-style: none;
     }
@@ -100,14 +101,11 @@
         text-decoration: none;
         
     }
+    
     a {
         color:white;
         font-size: 22px;
     }
-
-    /* h1 {
-        color: white;
-    } */
 
     .mypic {
         display: block;

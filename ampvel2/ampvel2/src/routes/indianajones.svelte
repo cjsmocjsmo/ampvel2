@@ -28,7 +28,6 @@ const unsubmovaddr = movaddr.subscribe(value => {
   movaddr_value = value
 })
 
-
 async function getPlayMov(mov) {
 	let addr = `${omxaddr_value}/playMediaReact?movie=${mov}`
 	console.log(addr)
@@ -39,16 +38,11 @@ async function getPlayMov(mov) {
 	}).catch(err => console.log(err));
 }
 let handlegetMovClick = (x) => {
-	// if (movLOCALPLAY) {
-	// 	let foo = x.split("Movies", 2)
-	// 	let newpath = movaddr_value + foo[1]
-	// 	localplayURL.set(newpath)
-	// 	console.log(newpath)
-	// } else {
-		let promise = getPlayMov(x).catch(err => console.log(err));
-	// }
+	let promise = getPlayMov(x).catch(err => console.log(err));
 }
+
 </script>
+
 <svelte:head>
 	<title>Indiana Jones</title>
 </svelte:head>
@@ -57,30 +51,33 @@ let handlegetMovClick = (x) => {
 	<button class="b1"><a href=".">Back</a></button>
 	<h1>Indiana Jones</h1>
 </nav>
-	<Controls />
-	{#each NewDat as N}
-		<img on:click={handlegetMovClick(N["movfspath"])} src={N["thumbpath"]} alt="fucked up"/>
-	{/each}
-	<Controls />
+<Controls />
+
+{#each NewDat as N}
+	<img on:click={handlegetMovClick(N["movfspath"])} src={N["thumbpath"]} alt="fucked up"/>
+{/each}
+
+<Controls />
+
 <nav>
 	<button class="b1"><a href=".">Back</a></button>
 	<button><a href=".">Back</a></button>
 </nav>
 
-
-
-
-
 <style>
+
 	.b1 {
 		float:right;
 	}
+
 	h1 {
 		color: white;
 	}
+
 	img {
         width: 130px;
         height: 195px;
         padding: 1px;
     }
+	
 </style>

@@ -1,9 +1,9 @@
 <script>
     import Controls from '../components/Controls.svelte'
+    import lis from "../../static/lostinspace.jpg"
     let LISshowlist;
     let LISshowlistcount;
     let visibleLIS = false
-
 
     async function getLostInSpace(x) {
         let addr = `http://192.168.0.42:8888/intLostInSpace?season=${x}`
@@ -27,14 +27,6 @@
         let promise = getLostInSpace(`03`).catch(err => console.log(err));
     }
 
-    // let fuckLIS = () => {
-    //     if (visibleLIS) {
-    //         visibleLIS = false
-    //     } else {
-    //         visibleLIS = true
-    //     }
-    // }
-
     async function getPlayMedia(x) {
         let y = "/media/pi/PiTB/media/TVShows" + x
         let addr = `http://192.168.0.42:8888/playMediaReact?movie=${y}`
@@ -46,26 +38,17 @@
     }
 
     let handlePlayShowLIS = (media) => {
-        // if (LP) {
-        //     console.log(media)
-        //     let foo = media.split("TVShows", 2)
-        //     let newpath = `http://192.168.0.42:8063` + media
-        //     console.log(newpath)
-        //     TVlocalplayURL.set(newpath)
-        //     visibleLIS = false
-        // } else {
-            let promise = getPlayMedia(media).catch(err => console.log(err));
-            visibleLIS = false
-        // }
+        let promise = getPlayMedia(media).catch(err => console.log(err));
+        visibleLIS = false
     }
-    import lis from "../../static/lostinspace.jpg"
+    
 </script>
+
 <svelte:head>
 	<title>Lost In Space</title>
 </svelte:head>
 
 <img class="mypic" src={lis} alt="fuck" />
-<!-- <h1>Lost In Space</h1> -->
 
 <svg viewBox="0 0 273 36">
     <rect on:click={handleLIS1} x="0" y="0" width="32%" height="30" style="fill:rgb(0,0,255);stroke-width:1;stroke:rgb(0,0,0)" />
@@ -86,12 +69,16 @@
         {/each}
     {/if}
 </ul>
+
 <Controls />
+
 <style>
+
     span {
         margin-right: 20px;
         color: white;
     }
+
     ul {
         list-style: none;
     }
@@ -101,14 +88,12 @@
         text-decoration: none;
         
     }
+
     a {
         color:white;
         font-size: 22px;
     }
 
-    /* h1 {
-        color: white;
-    } */
     .mypic {
         display: block;
         margin-left: auto;
@@ -116,4 +101,5 @@
         width: 30%;
         margin-bottom: 2em;
     }
+
 </style>

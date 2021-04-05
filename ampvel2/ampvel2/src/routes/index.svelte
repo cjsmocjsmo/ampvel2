@@ -14,6 +14,5 @@
 	<title>Movies</title>
 </svelte:head>
 
-
 <MOVSVG />
 <Controls />

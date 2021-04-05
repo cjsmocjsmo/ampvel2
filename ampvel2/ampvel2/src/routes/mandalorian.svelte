@@ -1,22 +1,21 @@
 <script>
     import Controls from '../components/Controls.svelte'
+    import mando from "../../static/mandalorian.jpg"
     let showlist;
     let showlistcount;
     let visibleDis = false
 
-    // onMount(
-        async function getMandalorian(x) {
-            let addr = `http://192.168.0.42:8888/intMandalorian?season=${x}`
-            fetch(addr, {mode: "cors", method: "GET"})
-            .then(r => r.json())
-            .then(data => {
-                console.log(data)
-                console.log(data[0].episode)
-                showlist = data
-                showlistcount = data.length
-            }).catch(err => console.log(err));
-        }
-    //)
+    async function getMandalorian(x) {
+        let addr = `http://192.168.0.42:8888/intMandalorian?season=${x}`
+        fetch(addr, {mode: "cors", method: "GET"})
+        .then(r => r.json())
+        .then(data => {
+            console.log(data)
+            console.log(data[0].episode)
+            showlist = data
+            showlistcount = data.length
+        }).catch(err => console.log(err));
+    }
 
     let handleMandalorian1 = () => {
         let promise = getMandalorian(`01`).catch(err => console.log(err));
@@ -29,14 +28,6 @@
     let handleMandalorian3 = () => {
         let promise = getMandalorian(`03`).catch(err => console.log(err));
     }
-
-    // let fuckDis = () => {
-    //     if (visibleDis) {
-    //         visibleDis = false
-    //     } else {
-    //         visibleDis = true
-    //     }
-    // }
 
     async function getPlayMedia(x) {
         let y = "/media/pi/PiTB/media/TVShows" + x
@@ -52,27 +43,17 @@
     }
 
      let handlePlayShow = (media) => {
-        // if (LP) {
-        //     console.log(media)
-
-        //     let foo = media.split("TVShows", 2)
-        //     let newpath = `http://192.168.0.42:8063` + "/" + media
-        //     console.log(newpath)
-        //     TVlocalplayURL.set(newpath)
-        //     visibleDis = false
-        // } else {
-            let promise = getPlayMedia(media).catch(err => console.log(err));
-            visibleDis = false
-        // }
+        let promise = getPlayMedia(media).catch(err => console.log(err));
+        visibleDis = false
     }
-    import mando from "../../static/mandalorian.jpg"
+    
 </script>
+
 <svelte:head>
 	<title>Mandalorian</title>
 </svelte:head>
 
 <img class="mypic" src={mando} alt="fuck" />
-<!-- <h1>Mandalorian</h1> -->
 
 <svg viewBox="0 0 273 36">
     <rect on:click={handleMandalorian1} x="0" y="0" width="32%" height="30" style="fill:rgb(0,0,255);stroke-width:1;stroke:rgb(0,0,0)" />
@@ -88,18 +69,15 @@
         {#each showlist as sshow }
             <li>
                 <a href="tvshows" on:click={handlePlayShow(sshow.tvfspath)}>{sshow.title}</a>
-                <!-- <span>{sshow.episode}</span> -->
             </li>
         {/each}
     {/if}
 </ul>
-<Controls />
-<style>
-    /* span {
-        margin-left: 20px;
-        color: white;
-    } */
 
+<Controls />
+
+<style>
+   
     ul {
         list-style: none;
     }
@@ -121,22 +99,5 @@
         width: 30%;
         margin-bottom: 2em;
     }
-    /* h1 {
-        color: white;
-    } */
-    /* button {
-        width:49%;
-        padding:7px;
-        margin:.5px;
-        background-color: rgb(192, 62, 153);
-        font-size: 16px;
-        font-weight: bold;
-    } */
-    /* .boo {
-        width:32%;
-        margin:.5px;
-    }
-    .bar {
-        width:98.5%;
-    } */
+
 </style>

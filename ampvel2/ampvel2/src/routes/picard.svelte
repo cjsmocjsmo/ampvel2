@@ -1,22 +1,21 @@
 <script>
     import Controls from '../components/Controls.svelte'
+    import picard from "../../static/picard.jpg"
     let showlist;
     let showlistcount;
     let visibleDis = false
 
-    // onMount(
-        async function getPicard(x) {
-            let addr = `http://192.168.0.42:8888/intPicard?season=01`
-            fetch(addr, {mode: "cors", method: "GET"})
-            .then(r => r.json())
-            .then(data => {
-                console.log(data)
-                console.log(data[0].episode)
-                showlist = data
-                showlistcount = data.length
-            }).catch(err => console.log(err));
-        }
-    //)
+    async function getPicard(x) {
+        let addr = `http://192.168.0.42:8888/intPicard?season=01`
+        fetch(addr, {mode: "cors", method: "GET"})
+        .then(r => r.json())
+        .then(data => {
+            console.log(data)
+            console.log(data[0].episode)
+            showlist = data
+            showlistcount = data.length
+        }).catch(err => console.log(err));
+    }
 
     let handlePicard1 = () => {
         let promise = getPicard(`01`).catch(err => console.log(err));
@@ -48,29 +47,17 @@
     }
 
      let handlePlayShow = (media) => {
-        // if (LP) {
-        //     console.log(media)
-
-        //     let foo = media.split("TVShows", 2)
-        //     let newpath = `http://192.168.0.42:8063` + "/" + media
-        //     console.log(newpath)
-        //     TVlocalplayURL.set(newpath)
-        //     visibleDis = false
-        // } else {
-            let promise = getPlayMedia(media).catch(err => console.log(err));
-            visibleDis = false
-        // }
-        
+        let promise = getPlayMedia(media).catch(err => console.log(err));
+        visibleDis = false
     }
-    import picard from "../../static/picard.jpg"
+    
 </script>
+
 <svelte:head>
 	<title>Picard</title>
 </svelte:head>
 
 <img class="mypic" src={picard} alt="fuck" />
-
-<!-- <h1>Picard</h1> -->
 
 <svg viewBox="0 0 273 35">
     <rect on:click={handlePicard1} x="0" y="0" width="49%" height="30" style="fill:rgb(0,0,255);stroke-width:1;stroke:rgb(0,0,0)" />
@@ -90,12 +77,16 @@
         {/each}
     {/if}
 </ul>
+
 <Controls />
+
 <style>
+
     span {
         margin-right: 20px;
         color: white;
     }
+
     ul {
         list-style: none;
     }
@@ -105,14 +96,12 @@
         text-decoration: underline;
         
     }
+
     a {
         color: white;
         font-size: 22px;
     }
 
-    /* h1 {
-        color: white;
-    } */
     .mypic {
         display: block;
         margin-left: auto;
@@ -120,4 +109,5 @@
         width: 30%;
         margin-bottom: 2em;
     }
+
 </style>

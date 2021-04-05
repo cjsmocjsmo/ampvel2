@@ -61,18 +61,8 @@
     }
 
     let handlePlayTNG = (media) => {
-        // if (LP) {
-        //     console.log(media)
-
-        //     let foo = media.split("TVShows", 2)
-        //     let newpath = `http://192.168.0.42:8063` + media
-        //     console.log(newpath)
-        //     TVlocalplayURL.set(newpath)
-        //     visibleTNG = false
-        // } else {
-            let promise = getPlayMedia(media).catch(err => console.log(err));
-            visibleTNG = false
-        // }
+        let promise = getPlayMedia(media).catch(err => console.log(err));
+        visibleTNG = false
     }
 
 </script>
