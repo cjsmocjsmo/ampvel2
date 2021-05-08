@@ -2,7 +2,7 @@
 	<title>TV Shows</title>
 </svelte:head>
 
-<svg viewBox="0 -5 300 210" >
+<svg viewBox="0 -5 300 225" >
 	<a href="alteredcarbon"><text x="0" y="10" font-size="1em" fill="grey">Altered Carbon</text></a>
 	<a href="alienworlds"><text x="183" y="10" font-size="1em" fill="grey">Alien Worlds</text></a>
 	
@@ -31,6 +31,9 @@
 	<a href="voyager"><text x="183" y="170" font-size="1em" fill="grey">Voyager</text></a>
 
 	<a href="wandavision"><text x="0" y="190" font-size="1em" fill="grey">WandaVision</text></a>
+	<a href="invincible"><text x="183" y="190" font-size="1em" fill="grey">Invincible</text></a>
+
+	<a href="thebadbatch"><text x="0" y="210" font-size="1em" fill="grey">The Bad Batch</text></a>
 	Sorry, your browser does not support inline SVG.  
 </svg>
 
